@@ -104,6 +104,12 @@ public enum ApplicationIdentifier {
     CONSUMER_PRODUCT_VARIANT("22", Format.ALPHANUMERIC_VARIABLE, 20),
 
     /**
+     * Third Party Controlled, Serialised Extension of GTIN (TPX)
+     * https://www.gs1.org/standards/barcodes/application-identifiers/235?lang=en
+     */
+    TPX("235", Format.ALPHANUMERIC_VARIABLE, 28),
+
+    /**
      * Additional product identification assigned by the manufacturer.
      */
     ADDITIONAL_ITEM_ID("240", Format.ALPHANUMERIC_VARIABLE, 30),
@@ -321,6 +327,12 @@ public enum ApplicationIdentifier {
      * GLN of the production or service location.
      */
     PRODUCTION_OR_SERVICE_LOCATION("416", Format.NUMERIC_FIXED, GLN.LENGTH),
+
+    /**
+     * GLN of ta party
+     * https://www.gs1.org/standards/barcodes/application-identifiers/417?lang=en
+     */
+    PARTY_LOCATION("416", Format.NUMERIC_FIXED, GLN.LENGTH),
 
     /**
      * Ship to - Deliver to postal code within a single postal authority.

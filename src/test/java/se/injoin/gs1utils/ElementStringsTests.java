@@ -574,6 +574,18 @@ public class ElementStringsTests {
     }
 
     @Test
+    public void testParseRealWorldExample_withTPX() {
+        ElementStrings.ParseResult result = ElementStrings.parse("01973003281210023103002260235170529038\u001D17170608");
+        assertFalse(result.isPartial());
+        assertFalse(result.isEmpty());
+        assertEquals(4, result.getElementsByString().size());
+        assertEquals("97300328121002", result.getString(ApplicationIdentifier.GTIN));
+        assertEquals(new BigDecimal("2.260"), result.getDecimal(ApplicationIdentifier.ITEM_NET_WEIGHT_KG));
+        assertEquals("170529038", result.getString(ApplicationIdentifier.TPX));
+        assertDate("2017-06-08", result.getDate(ApplicationIdentifier.EXPIRATION_DATE));
+    }
+
+    @Test
     public void testResolveTwoDigitYear() {
         ElementStrings.SequenceReader r = new ElementStrings.SequenceReader("");
 
