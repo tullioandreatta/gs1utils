@@ -7,6 +7,8 @@ Supports variable measure GTINs as defined by GS1 Sweden in the (GTIN-14) 02- na
 
 The library is licensed under Apache License 2 and has no dependencies on other libraries.
 
+Supported GS1 specification version - Release 20.0
+
 ## Global Trade Item Number (GTIN)
 
 GTINs come in 4 lengths, GTIN-14, GTIN-13, GTIN-12 and GTIN-8, also known as UPC-A, EAN, UCC-8, UCC-13, ITF-14. The library has methods for identification of each length and conversion between them.
